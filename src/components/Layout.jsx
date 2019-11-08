@@ -26,7 +26,7 @@ injectGlobal`
     html {
       font-size: 16px !important;
       h1 {
-        font-size: 3.157rem
+        font-size: 2.157rem
       }
       h2 {
         font-size: 2.369rem;
@@ -45,7 +45,7 @@ injectGlobal`
   @media (max-width: ${theme.breakpoint.s}), (max-device-width: ${theme.breakpoint.s}) {
     html {
       h1 {
-        font-size: 2.441rem
+        font-size: 1.8rem
       }
       h2 {
         font-size: 1.953rem;

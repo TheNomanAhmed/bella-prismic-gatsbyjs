@@ -9,10 +9,12 @@ import GridItem from '../components/GridItem';
 import BeTheHero from '../images/be_the_hero.svg';
 import DataReport from '../images/data_report.svg';
 import MayTheForce from '../images/may_the_force.svg';
+import Tools from '../images/tools.svg';
+import Desk from '../images/desk.jpg';
 
 const Header = styled.header`
   width: 100%;
-  height: 900px;
+  height: 550px;
   position: relative;
   padding: 1.75rem;
   @media (max-width: ${props => props.theme.breakpoint.s}) {
@@ -20,7 +22,7 @@ const Header = styled.header`
   }
 `;
 
-const Logo = styled.h2`
+const Logo = styled.h2`wrapper
   position: absolute;
   top: 0;
   left: 0;
@@ -31,17 +33,18 @@ const Logo = styled.h2`
 `;
 
 const Hero = styled(Flex)`
-  height: 100%;
+  height: 80%;
   text-align: center;
   h1 {
-    letter-spacing: 0.2rem;
-    line-height: 4.5rem;
+    margin-top: 10%;
+    letter-spacing: 0.05rem;
+    line-height: 3.2rem;
   }
   h3 {
     font-family: ${props => props.theme.fontFamily.body};
     margin-top: 2rem;
-    font-size: 1.85rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
   @media (max-width: ${props => props.theme.breakpoint.m}) {
     h1 {
@@ -53,6 +56,7 @@ const Hero = styled(Flex)`
   }
   @media (max-width: ${props => props.theme.breakpoint.s}) {
     h1 {
+      margin: auto;
       line-height: 2.5rem;
     }
     h3 {
@@ -62,6 +66,7 @@ const Hero = styled(Flex)`
 `;
 
 const Wrapper = styled(Flex)`
+  padding: 0 6%;
   max-width: ${props => props.theme.maxWidth};
 `;
 
@@ -77,13 +82,12 @@ const PrimaryBG = styled.section`
 `;
 
 const ServiceImage = styled.div`
-  flex-basis: calc(99.9% * 4 / 7 - 5rem);
+  flex-basis: calc(99.9% * 4 / 7 - 10rem);
   max-width: calc(99.9% * 4 / 7 - 5rem);
   width: calc(99.9% * 4 / 7 - 5rem);
   text-align: center;
   img {
     width: 90%;
-    margin-bottom: 2rem;
   }
   @media (max-width: ${props => props.theme.breakpoint.l}) {
     flex-basis: 100%;
@@ -101,9 +105,7 @@ const ServiceImage = styled.div`
 `;
 
 const ServiceText = styled.div`
-  flex-basis: calc(99.9% * 3 / 7 - 5rem);
-  max-width: calc(99.9% * 3 / 7 - 5rem);
-  width: calc(99.9% * 3 / 7 - 5rem);
+  flex-basis: calc(99.9% * 3 / 7 - -7rem);
   @media (max-width: ${props => props.theme.breakpoint.l}) {
     flex-basis: 100%;
     max-width: 100%;
@@ -115,7 +117,7 @@ const ServiceText = styled.div`
     margin-left: 0;
   }
   li:before {
-    content: '－';
+    content: '✔️';
     padding-right: 8px;
   }
 `;
@@ -130,11 +132,17 @@ const Contact = styled(Wrapper)`
   h3 {
     font-family: ${props => props.theme.fontFamily.body};
     margin-top: 1rem;
-    font-size: 1.85rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 600;
   }
-  @media (max-width: ${props => props.theme.breakpoint.m}) {
-    font-size: 1.5rem;
+  @media (max-width: ${props => props.theme.breakpoint.l}) {
+    font-size: 1.25rem;
+    h3 {
+      font-family: ${props => props.theme.fontFamily.body};
+      margin-top: 0;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
   }
 `;
 
@@ -145,15 +153,20 @@ const IndexPage = ({
 }) => (
   <Layout>
     <Header>
-      <Logo>Bella Inc.</Logo>
+     {/*  <Logo>Noman Khan</Logo> */}
       <Hero justifyContent="center" alignItems="center" flexDirection="column">
         <h1>
-          We design and develop <br /> noice web applications.
+        👋 Hello, I am Noman.  <br /> As a Design Technologist, <br /> 
+        I design and develop pixel perfect <br />
+        user interfaces and experiences.
         </h1>
-        <h3>Hi, Bella Inc., the human form of the 💯 Emoji.</h3>
+        <h3>Here are some of my recent projects 😄</h3>
       </Hero>
     </Header>
-    <Wrapper p={4} mb={[4, 4, 7]} mx="auto" justifyContent="space-between" flexWrap="wrap">
+
+
+
+    <Wrapper p={4} mb={[4, 4, 5]} mx="auto" justifyContent="space-between" flexWrap="wrap">
       {edges.map(c => (
         <GridItem
           uid={c.node.uid}
@@ -165,45 +178,76 @@ const IndexPage = ({
         />
       ))}
     </Wrapper>
+
+    
     <PrimaryBG>
       <Wrapper flexDirection="column" p={4} mx="auto">
-        <Flex w={1} py={5} justifyContent="space-between" flexWrap="wrap">
+
+
+        <Flex w={1} py={3} justifyContent="space-between" flexWrap="wrap">
+          
           <ServiceImage>
-            <img src={BeTheHero} alt="Be The Hero" />
+            <img src={Desk} alt="Be The Hero" />
           </ServiceImage>
           <ServiceText>
-            <h2>Be your own hero</h2>
+            <h2>How I work! 💼 </h2>
             <p>
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-              ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is
-              a paradisematic country, in which roasted parts of sentences fly into your mouth.
+            In my design process, I incorporate principles from Design Thinking and the 
+            Design Sprint. My procedure is to go through the phases of research, design, 
+            prototyping and testing. I would go through iterations wherever necessary to 
+            achieve the best result possible.
             </p>
             <ul>
-              <li>Service Super</li>
-              <li>Great Offer</li>
-              <li>Item Wrap</li>
+              <li>Research</li>
+              <p>UX Research will most likely be conducted at the beginning (understand) 
+                and at the end of the design process (test). Methods I use and have experience
+                 with, are (Remote) Interviews, Online Surveys, Contextual Inquiry and 
+                 Experience Interviews.</p>
+
+              <li>Design</li>
+              <p>Based on the results from the research, I will create multiple concepts for 
+                user flows and solutions for information architecture. After consolidating concepts, 
+                visual design will be done in Sketch..</p>
+
+              <li>Prototype</li>
+              <p>For visualization of user flows and interactive details, 
+                the screens will be merged into a prototype with a prototyping tool like InVision or Figma. 
+                This way the digital product can be tested with users.</p>
+
+                <li>Test</li>
+                <p>It has been found that the number of five testers is ideal to 
+                  get the most valuable feedback. Testers would be given a task 
+                  to fulfill with the product and they would be asked questions accordingly.</p>
             </ul>
           </ServiceText>
         </Flex>
+
+
+
         <Flex w={1} py={5} justifyContent="space-between" flexDirection="row-reverse" flexWrap="wrap">
           <ServiceImage>
-            <img src={DataReport} alt="Data Report" />
+            <img src={Tools} alt="Data Report" />
           </ServiceImage>
           <ServiceText>
-            <h2>We love charts!</h2>
+            <h2>Tools i use! 🔧</h2>
             <p>
-              Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-              blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language
-              ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.
+              I like to work on the lastest and some of the most amazing tools currently in the 
+              market. 
             </p>
             <ul>
-              <li>Service Super</li>
-              <li>Great Offer</li>
-              <li>Item Wrap</li>
+              <li>Adobe Creative Suite</li>
+              <li>Adobe XD</li>
+              <li>Sketch</li>
+              <li>Figma</li>
+              <li>inVision</li>
+              <li>GatsbyJS</li>
+              <li>Trello</li>
             </ul>
           </ServiceText>
         </Flex>
+
+{/* 
+
         <Flex w={1} py={5} justifyContent="space-between" flexWrap="wrap">
           <ServiceImage>
             <img src={MayTheForce} alt="May the Force" />
@@ -221,11 +265,16 @@ const IndexPage = ({
             </ul>
           </ServiceText>
         </Flex>
+
+ */}
+
+
+
       </Wrapper>
     </PrimaryBG>
     <Contact px={4} py={6} justifyContent="center" alignItems="center" flexDirection="column">
-      <h1>Say hi!</h1>
-      <h3>contact@domain.com</h3>
+      <h1>Say hi!👋</h1>
+      <h3>TheNomanAhmed@gmail.com</h3>
     </Contact>
     <Footer />
   </Layout>
