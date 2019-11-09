@@ -11,14 +11,16 @@ import SEO from '../components/SEO';
 import config from '../../config/website';
 
 const Hero = styled.section`
-  width: 100%;
-  height: 100vh;
-  position: relative;
   overflow: hidden;
   .gatsby-image-outer-wrapper {
     position: static !important;
     > div {
       position: static !important;
+    }
+  }
+  @media (max-width: ${props => props.theme.breakpoint.l}) {
+    img {
+      height: 50vh;
     }
   }
 `;
@@ -29,7 +31,6 @@ const Wrapper = styled(Box)`
 
 const TitleWrapper = styled(Box)`
   width: 100%;
-  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
@@ -41,13 +42,13 @@ const Title = styled.h1`
   max-width: ${props => props.theme.maxWidthText};
   text-align: center;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 0 10px;
 `;
 
 const SubTitle = styled.h3`
   color: ${props => props.theme.colors.text};
   max-width: ${props => props.theme.maxWidthText};
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
   text-align: center;
 `;
 
@@ -98,15 +99,19 @@ const CaseTemplate = ({ data: { prismicCaseStudy: caseNode } }) => {
       <Helmet title={`${data.title.text} | ${config.siteTitle}`} />
       <SEO caseNode={caseNode} casePath={caseNode.uid} caseSEO />
       <Hero>
-        <Img fluid={data.header_image.localFile.childImageSharp.fluid} />
-        <TitleWrapper py={4}>
+      <Footer isCase />
+      <TitleWrapper py={3}>
           <Title>{data.title.text}</Title>
         </TitleWrapper>
-      </Hero>
-      <Wrapper py={4} px={4} mx="auto">
+        <Wrapper py={4} px={4} mx="auto">
         <SubTitle>{data.subtitle.text}</SubTitle>
+
+        <Img fluid={data.header_image.localFile.childImageSharp.fluid} />
         <Content dangerouslySetInnerHTML={{ __html: data.content.html }} />
       </Wrapper>
+        
+      </Hero>
+     
       <Footer isCase />
     </Layout>
   );

@@ -46,15 +46,20 @@ const Footer = ({ isCase }) => {
       <Inner justifyContent="space-between" p={4}>
         {isCase ? (
           <React.Fragment>
-            <StyledLink to="/">Return to home</StyledLink>
-            <div>Contact Us</div>
+            <StyledLink to="/">Home</StyledLink>
+        {/*     <div>Contact Us</div> */}
           </React.Fragment>
         ) : (
           <React.Fragment>
             <div>
               Copyright &copy; {year} by{' Noman'}
             </div>
-            <div>Instagram &mdash; Behance &mdash; Dribbble</div>
+            <div>
+            <a href="https://instagram.com/TheNomanAhmed" target="_blank">Instagram </a>
+             &mdash; 
+             <a href="https://behance.net/TheNomanAhmed" target="_blank"> Behance </a> &mdash; 
+             <a href="https://dribbble.com/TheNomanAhmed" target="_blank"> Dribbble</a>
+             </div>
           </React.Fragment>
         )}
       </Inner>

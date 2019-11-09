@@ -6,11 +6,8 @@ import { Flex } from 'grid-emotion';
 import Footer from '../components/Footer';
 import Layout from '../components/Layout';
 import GridItem from '../components/GridItem';
-import BeTheHero from '../images/be_the_hero.svg';
-import DataReport from '../images/data_report.svg';
-import MayTheForce from '../images/may_the_force.svg';
 import Tools from '../images/tools.svg';
-import Desk from '../images/desk.jpg';
+import Work from '../images/work.svg';
 
 const Header = styled.header`
   width: 100%;
@@ -187,7 +184,7 @@ const IndexPage = ({
         <Flex w={1} py={3} justifyContent="space-between" flexWrap="wrap">
           
           <ServiceImage>
-            <img src={Desk} alt="Be The Hero" />
+            <img src={Work} alt="How i work" />
           </ServiceImage>
           <ServiceText>
             <h2>How I work! 💼 </h2>
