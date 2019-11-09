@@ -55,10 +55,10 @@ const Footer = ({ isCase }) => {
               Copyright &copy; {year} by{' Noman'}
             </div>
             <div>
-            <a href="https://instagram.com/TheNomanAhmed" target="_blank">Instagram </a>
+            <a href="https://instagram.com/TheNomanAhmed" target="_blank" rel="noopener">Instagram </a>
              &mdash; 
-             <a href="https://behance.net/TheNomanAhmed" target="_blank"> Behance </a> &mdash; 
-             <a href="https://dribbble.com/TheNomanAhmed" target="_blank"> Dribbble</a>
+             <a href="https://behance.net/TheNomanAhmed" target="_blank" rel="noopener"> Behance </a> &mdash; 
+             <a href="https://dribbble.com/TheNomanAhmed" target="_blank" rel="noopener"> Dribbble</a>
              </div>
           </React.Fragment>
         )}
